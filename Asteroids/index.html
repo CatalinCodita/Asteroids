@@ -1,0 +1,47 @@
+<style>
+    body {
+        margin: 0;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroids</title>
+    <link rel="stylesheet" href="./style.css"> 
+    <style>
+        body {
+            background-color: black; 
+            margin: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <h1></h1>
+        <button id="startButton">START</button>
+    </div>
+    <canvas id="gameCanvas" style="display: none;"></canvas>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startButton = document.getElementById('startButton');
+            const menu = document.getElementById('menu');
+            const gameCanvas = document.getElementById('gameCanvas');
+
+            startButton.addEventListener('click', function() {
+                
+                menu.style.display = 'none';
+                gameCanvas.style.display = 'block';
+
+                
+                const script = document.createElement('script');
+                script.src = './index.js'; 
+                document.body.appendChild(script);
+            });
+        });
+    </script>
+</body>
+</html>
